@@ -1,0 +1,11 @@
+.modal{
+  padding: 20px;
+  &--footer{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  &--body{
+    padding-bottom: 20px;
+  }
+}

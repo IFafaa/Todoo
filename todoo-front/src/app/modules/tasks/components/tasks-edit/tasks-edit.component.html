@@ -1,0 +1,8 @@
+<app-default-modal title="Editar tarefa">
+  <div class="modal">
+    <app-tasks-form
+    (formCallback)="editTask($event)"
+    (cancellCallback)="closeModal()"
+    [task]="data.task"></app-tasks-form>
+  </div>
+</app-default-modal>

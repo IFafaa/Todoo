@@ -1,0 +1,57 @@
+.content{
+  padding-top: 80px;
+  width: 25%;
+  margin: 0 auto;
+  min-width: 360px;
+  &--header{
+    &__logo{
+      color: var(--purple-dark);
+      display: flex;
+      justify-content: center;
+      img{
+        width: 50%;
+        margin: 0 auto;
+        padding: 15px 0px;
+      }
+    }
+    &__title{
+      h2{
+        font-size: 38px;
+        font-weight: bold;
+        text-align: center;
+        color: var(--blue-dark);
+      }
+    }
+  }
+  &--body{
+    &__field{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0px;
+      mat-form-field{
+        width: 80%;
+      }
+    }
+  }
+  &--footer{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    &__login{
+      display: flex;
+      justify-content: center;
+    }
+    &__or{
+      display: flex;
+      justify-content: center;
+      padding: 10px 0px;
+      font-weight: bold;
+    }
+    &__register{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

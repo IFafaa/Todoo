@@ -1,0 +1,50 @@
+<app-default-page title="" [header]="false">
+ <div class="content">
+    <app-default-content>
+      <div class="content--header__logo">
+        <img src="../../../../../assets/images/todoo-logo-purple.png" alt="logo todoo">
+      </div>
+      <div class="content--header__title">
+       <h2>Seja bem vindo</h2>
+     </div>
+      <div class="content--body">
+        <form [formGroup]="form">
+          <div class="content--body__field">
+            <mat-form-field class="example-full-width">
+              <mat-label>E-mail</mat-label>
+              <input
+              type="email"
+              matInput
+              placeholder="E-mail"
+              formControlName="email"/>
+              <mat-error *ngIf="form.get('email')?.hasError('required')">*Por favor preencha este campo</mat-error>
+              <mat-error *ngIf="form.get('email')?.hasError('email')">*Por favor digite um e-mail válido</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="content--body__field">
+            <mat-form-field class="example-full-width">
+              <mat-label>Senha</mat-label>
+              <input
+              type="password"
+              matInput
+              placeholder="Senha"
+              formControlName="password"/>
+              <mat-error *ngIf="form.get('password')?.hasError('required')">*Por favor preencha este campo</mat-error>
+            </mat-form-field>
+          </div>
+        </form>
+      </div>
+      <div class="content--footer">
+        <div class="content--footer__login">
+          <default-button value="Entrar" type="primary" class="w-100" (click)="sendForm()"></default-button>
+        </div>
+        <div class="content--footer__or">
+          ou
+        </div>
+        <div class="content--footer__register">
+          <default-button value="Registrar" type="secondary" class="w-100" routerLink="/auth/register"></default-button>
+        </div>
+      </div>
+    </app-default-content>
+ </div>
+</app-default-page>

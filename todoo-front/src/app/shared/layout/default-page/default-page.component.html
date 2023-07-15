@@ -1,0 +1,12 @@
+<app-header *ngIf="header"></app-header>
+<div class="page">
+  <div class="page--title" *ngIf="title">
+    <!-- <span class="material-symbols-outlined">
+      {{icon}}
+    </span> -->
+    <h2>{{title}}</h2>
+  </div>
+  <div class="page--content">
+    <ng-content></ng-content>
+  </div>
+</div>

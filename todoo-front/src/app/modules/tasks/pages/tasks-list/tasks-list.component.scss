@@ -1,0 +1,42 @@
+.tasks{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &--card{
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &__title{
+      font-weight: bolder;
+      font-size: 20px;
+      color: var(--purple-dark);
+    }
+    &__content{
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+      background-color: var(--blue-very-light);
+      max-height: 302px;
+      overflow-y: auto;
+
+    }
+  }
+}
+
+.head{
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.error{
+  &--message{
+    &__notFound{
+      display: flex;
+      justify-content: center;
+      font-size: 17px;
+    }
+  }
+}

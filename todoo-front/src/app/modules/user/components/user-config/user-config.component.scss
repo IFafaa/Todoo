@@ -1,0 +1,59 @@
+.modal{
+  background-color: white;
+  padding: 40px 20px 20px 20px;
+  &--content{
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &__icon{
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      .icon{
+        background-color: rgba(211, 211, 211, 0.514);
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+      }
+     .user{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      span{
+        text-align: center;
+      }
+      &--username{
+        font-size: 23px;
+      }
+      &--email{
+        font-size: 17px;
+      }
+     }
+    }
+    &__info{
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      .item{
+        padding: 25px 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        &:hover{
+          background-color: #ebebeb6e;
+        }
+        &--icon{
+          font-size: 25px;
+        }
+        &--title{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  &--footer{
+    display: flex;
+    justify-content: flex-end;
+  }
+}

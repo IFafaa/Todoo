@@ -1,0 +1,35 @@
+<header>
+  <div class="content">
+    <img src="../../../../assets/images/todoo-logo-blue.png" alt="">
+    <div class="content--menu">
+      <button mat-button [matMenuTriggerFor]="menu" class="content--menu__button">
+        <span class="material-symbols-outlined content--menu__icon">
+          account_circle
+        </span>
+      </button>
+      <mat-menu #menu="matMenu">
+        <!--V2-->
+        <!-- <button mat-menu-item class="menu--item" (click)="openUserConfig()">
+          <span class="material-symbols-outlined">
+            manage_accounts
+          </span>
+          <span>Sua conta</span>
+        </button> -->
+        <!--V2-->
+        <!-- <button mat-menu-item class="menu--item">
+          <span class="material-symbols-outlined">
+            settings
+          </span>
+          <span>Configurações</span>
+        </button> -->
+        <button mat-menu-item class="menu--item" (click)="logout()">
+          <span class="material-symbols-outlined">
+            logout
+          </span>
+          <span>Sair</span>
+      </button>
+      </mat-menu>
+    </div>
+  </div>
+
+</header>

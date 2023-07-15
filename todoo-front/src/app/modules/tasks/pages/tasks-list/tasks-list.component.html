@@ -1,0 +1,22 @@
+<app-default-page title="Minhas Tarefas" icon="checklist">
+  <div class="head">
+    <default-button (click)="openCreateTask()" value="Criar tarefa" icon="add"></default-button>
+    <!--V2-->
+    <!-- <default-button value="Criar passo" icon="add" type="secondary"></default-button> -->
+  </div>
+  <app-default-content>
+    <div *ngIf="!hasTasks" class="error--message__notFound">Você ainda não tem nenhuma tarefa criada</div>
+    <div class="tasks" *ngIf="hasTasks">
+      <div class="tasks--card" *ngFor="let item of tasks">
+        <h4 class="tasks--card__title">{{item.status}}</h4>
+        <div class="tasks--card__content" *ngIf="item.data.length">
+          <app-tasks-data
+          [tasks]="item.data"
+          (editTaskCallback)="editTask($event)"
+          (deleteTaskCallback)="deleteTask($event)"
+          ></app-tasks-data>
+        </div>
+      </div>
+    </div>
+  </app-default-content>
+</app-default-page>

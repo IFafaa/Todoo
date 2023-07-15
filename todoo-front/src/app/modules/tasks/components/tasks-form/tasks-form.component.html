@@ -1,0 +1,47 @@
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="form">
+    <div class="row-1 row">
+      <div class="row-1__input">
+        <mat-form-field class="example-full-width">
+          <mat-label>Nome da tarefa</mat-label>
+          <input
+          matInput
+          placeholder="Ex. Estudar"
+          formControlName="name"/>
+          <mat-error *ngIf="form.get('name')?.invalid">*Por favor preencha este campo</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="row-1__input">
+        <mat-form-field appearance="fill">
+          <mat-label>Status</mat-label>
+          <mat-select formControlName="status">
+            <mat-option *ngFor="let item of status" [value]="item.id">{{item.description}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.get('status')?.invalid">*Por favor preencha este campo</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row-2 row">
+      <mat-form-field class="example-full-width">
+        <mat-label>Descrição da tarefa</mat-label>
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          #autosize="cdkTextareaAutosize"
+          cdkAutosizeMinRows="1"
+          cdkAutosizeMaxRows="5"
+          maxlength="300"
+          #textarea
+          formControlName="description"
+        ></textarea>
+        <mat-hint align="end">{{ textarea.value.length }}/300</mat-hint>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions class="foot">
+  <default-button value="Cancelar" type="cancel" (click)="closeModal()"></default-button>
+  <default-button [value]="task ? 'Salvar' : 'Criar'" type="secondary" (click)="sendForm()"></default-button>
+</mat-dialog-actions>

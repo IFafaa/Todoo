@@ -1,0 +1,21 @@
+.modal{
+  &--content{
+    padding-bottom: 30px;
+    &--body{
+      &__field{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0px;
+        mat-form-field{
+          width: 80%;
+        }
+      }
+    }
+  }
+  &--footer{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}

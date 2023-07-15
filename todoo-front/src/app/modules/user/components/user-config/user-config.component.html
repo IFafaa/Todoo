@@ -1,0 +1,37 @@
+<app-default-modal title="Sua conta">
+  <div class="modal--content">
+    <div class="modal--content__icon">
+      <div class="icon">
+      </div>
+      <div class="user">
+        <span class="user--username">{{user.username}}</span>
+        <span class="user--email">{{user.email}}</span>
+      </div>
+    </div>
+    <div class="modal--content__info">
+      <div class="item">
+        <span class="item--icon material-symbols-outlined">
+          lock
+        </span>
+        <span class="item--title">Atualizar Usuário e Senha</span>
+      </div>
+      <hr>
+      <div class="item" (click)="changeUserPhoto()">
+        <span class="item--icon material-symbols-outlined">
+          add_a_photo
+        </span>
+        <span class="item--title">Alterar Foto de Perfil</span>
+      </div>
+      <hr>
+      <div class="item" (click)="changeEmail()">
+        <span class="item--icon material-symbols-outlined">
+          mail
+        </span>
+        <span class="item--title">Alterar E-mail</span>
+      </div>
+    </div>
+  </div>
+  <div class="modal--footer">
+      <default-button type="cancel" value="Fechar" (click)="closeModal()"></default-button>
+  </div>
+</app-default-modal>

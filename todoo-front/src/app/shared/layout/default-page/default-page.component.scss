@@ -1,0 +1,24 @@
+.page{
+  width: 100%;
+  min-height: 90vh;
+  padding: 30px;
+  &--title{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 10px 5px 0px;
+    h2{
+      margin: 0;
+      font-size: 26px;
+      color: rgba(0, 0, 0, 0.582);
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+    span{
+      font-size: 36px;
+    }
+    width: max-content;
+    border-bottom: 3px solid var(--blue-light);
+    margin-bottom: 10px;
+  }
+}

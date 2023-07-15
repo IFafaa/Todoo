@@ -1,0 +1,17 @@
+<div class="card" *ngFor="let item of tasks">
+  <h3>
+    {{item.name}}
+  </h3>
+  <div class="container--buttons">
+   <button class="btn--circle btn--circle__edit">
+      <span (click)="editTask(item)" class="material-symbols-outlined">
+        edit
+      </span>
+   </button>
+    <button (click)="deleteTask(item)" class="btn--circle btn--circle__delete">
+      <span class=" material-symbols-outlined">
+        delete
+      </span>
+    </button>
+  </div>
+</div>

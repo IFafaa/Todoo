@@ -1,0 +1,7 @@
+<app-default-modal title="Criar tarefa">
+  <div class="modal">
+    <app-tasks-form
+    (formCallback)="createTask($event)"
+    (cancellCallback)="closeModal()"></app-tasks-form>
+  </div>
+</app-default-modal>

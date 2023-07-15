@@ -1,0 +1,23 @@
+mat-form-field{
+  width: 100%;
+}
+
+form{
+  .row{
+    padding-bottom: 10px;
+  }
+  .row-1{
+    display: flex;
+    gap: 8px;
+    &__input{
+      width: 50%;
+    }
+  }
+}
+
+.foot{
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

@@ -1,0 +1,41 @@
+.card{
+  padding: 15px 10px;
+  background-color: white;
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: grab;
+  h3{
+    margin: 0;
+    text-transform: capitalize;
+  }
+}
+
+.btn{
+  &--circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer !important;
+    &__edit{
+      background-color: var(--blue-light);
+    }
+    &__delete{
+      background-color: var(--red);
+    }
+  }
+}
+
+.container{
+  &--buttons{
+    display: flex;
+    gap: 10px;
+  }
+}
