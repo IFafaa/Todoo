@@ -45,20 +45,7 @@ Inicie o servidor
 
 Entre no diretório do projeto de back-end
 
-```bash
-  cd todoo-back
-```
 
-Instale as dependências
-
-```bash
-  npm install
-```
-
-Inicie o servidor
-
-```bash
-  npm start
-```
+OBS: relacionado ao projeto de back-end ainda estou analisando como posso subir para a nuvem
 
 
